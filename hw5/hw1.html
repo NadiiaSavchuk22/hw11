@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4cd62441ed.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./st.css">
+    <link rel="stylesheet" href="./header.css">
+</head>
+
+<body>
+    <header>
+        <nav class="header_nav">
+            <div class="header_logo">
+                <a href="./hw1.html">
+                    <i class="fa-solid fa-cube"></i>
+                </a>
+            </div>
+            <div class="nav_links">
+                <a href="./hw2.html"> Display/Visibility </a>
+                <a href="./hw3.html"> Float </a>
+                <a href="./hw4.html"> Musicians </a>
+                <a href="./hw5.html"> Сubes </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="sticky">
+            <section class="first_section" id="overflow">
+
+                <div class="section_container">
+                    <h1 class="page_heading">
+                        CSS Layout -
+                        <span class="heading_span">
+                            <img src="./assets/underline.svg" alt="Underline" class="heading_underline">
+                            Overflow
+                        </span>
+                    </h1>
+                    <div class="section_text">
+                        <p class="text_p">
+                            The <span> overflow </span> property specifies whether to clip the content or to add
+                            scrollbars when the content of an element is too big to fit in the specified area.
+                            <br>
+                            The overflow property has the following values:
+                        </p>
+
+                        <ul class="text_list">
+                            <li>
+                                <span> visible </span>
+                                - Default. The overflow is not clipped. The content renders outside the element's box
+                            </li>
+                            <li>
+                                <span> hidden </span>
+                                - The overflow is clipped, and the rest of the content will be invisible
+                            </li>
+                            <li>
+                                <span> scroll </span>
+                                - The overflow is clipped, and a scrollbar is added to see the rest of the content
+                            </li>
+                            <li>
+                                <span> auto </span>
+                                - Similar to scroll, but it adds scrollbars only when necessary
+                            </li>
+                        </ul>
+                        <a class="link_btn" href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"
+                            target="_blank"> Learn more </a>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="spacer"></div>
+        </div>
+
+        <section class="second_section">
+            <div class="section_container">
+                <h2 class="section_title"> Overflow values </h2>
+                <div class="block_list" id="overflow_values">
+                    <div class="list_item">
+                        <p class="item_text">
+                            Overflow options include hiding overflow content, enabling scroll bars to view overflow
+                            content or displaying the content flowing out of an element box into the surrounding area,
+                            and combinations there of.
+
+                            The following nuances should be kept in mind while using the various keywords for overflow:
+
+                            Specifying a value other than visible (the default) or clip for overflow creates a new block
+                            formatting context. This is necessary for technical reasons;
+                        </p>
+                        <div class="item_value">
+                            <div class="value">
+                                visible
+                            </div>
+                            <img src="./assets/notch_right.svg" alt="Notch Right" class=" notch">
+                            <img src="./assets/notch_left.svg" alt="Notch Left" class="notch notch-right">
+                        </div>
+
+                    </div>
+
+                    <div class="list_item">
+                        <p class="item_text overflow_hidden">
+                            Overflow options include hiding overflow content, enabling scroll bars to view overflow
+                            content or displaying the content flowing out of an element box into the surrounding area,
+                            and combinations there of.
+
+                            The following nuances should be kept in mind while using the various keywords for overflow:
+
+                            Specifying a value other than visible (the default) or clip for overflow creates a new block
+                            formatting context. This is necessary for technical reasons; if a float intersects with a
+                            scrolling element, it would forcibly rewrap the content after each scroll step, leading to a
+                            slow scrolling experience.
+                        </p>
+                        <div class="item_value">
+                            <div class="value">
+                                hidden
+                            </div>
+                            <img src="./assets/notch_right.svg" alt="Notch Right" class=" notch">
+                            <img src="./assets/notch_left.svg" alt="Notch Left" class="notch notch-right">
+                        </div>
+                    </div>
+
+                    <div class="list_item">
+                        <p class="item_text overflow_scroll">
+                            Overflow options include hiding overflow content, enabling scroll bars to view overflow
+                            content or displaying the content flowing out of an element box into the surrounding area,
+                            and combinations there of.
+
+                            The following nuances should be kept in mind while using the various keywords for overflow:
+
+                            Specifying a value other than visible (the default) or clip for overflow creates a new block
+                            formatting context. This is necessary for technical reasons; if a float intersects with a
+                            scrolling element, it would forcibly rewrap the content after each scroll step, leading to a
+                            slow scrolling experience.
+                        </p>
+                        <div class="item_value">
+                            <div class="value">
+                                scroll
+                            </div>
+                            <img src="./assets/notch_right.svg" alt="Notch Right" class=" notch">
+                            <img src="./assets/notch_left.svg" alt="Notch Left" class="notch notch-right">
+                        </div>
+
+                    </div>
+
+                    <div class="list_item">
+                        <p class="item_text overflow_auto">
+                            Overflow options include hiding overflow content, enabling scroll bars to view overflow
+                            content or displaying the content flowing out of an element box into the surrounding area,
+                            and combinations there of.
+
+                            The following nuances should be kept in mind while using the various keywords for overflow:
+
+                            Specifying a value other than visible (the default) or clip for overflow creates a new block
+                            formatting context. This is necessary for technical reasons; if a float intersects with a
+                            scrolling element, it would forcibly rewrap the content after each scroll step, leading to a
+                            slow scrolling experience.
+                        </p>
+                        <div class="item_value">
+                            <div class="value">
+                                auto
+                            </div>
+                            <img src="./assets/notch_right.svg" alt="Notch Right" class=" notch">
+                            <img src="./assets/notch_left.svg" alt="Notch Left" class="notch notch-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav class="footer_nav">
+            <a href="./hw1.html"> Main page </a>
+        </nav>
+    </footer>
+
+</body>
