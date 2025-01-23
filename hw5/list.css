@@ -1,0 +1,52 @@
+.musicians_list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+li.musicians_list_item {
+    width: 400px;
+    padding: 50px 30px 30px;
+    margin: 10px;
+    color: #ffffff;
+    border: 3px solid #ff2b2b;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+    list-style-position: inside;
+    line-height: 1.7;
+    position: relative;
+}
+
+li.musicians_list_item::before {
+    content: '\f001';
+    position: absolute;
+    left: 95px;
+    top: 12px;
+    color: #ff2b2b;
+    font-family: 'Font Awesome 6 Free';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+li.musicians_list_item:nth-of-type(odd) {
+    background-color: #056646;
+}
+
+li.musicians_list_item:nth-of-type(even) {
+    background-color: #161616;
+}
+
+li.musicians_list_item span {
+    font-weight: 500;
+    color: #c6fb50;
+}
+
+li.musicians_list_item span {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

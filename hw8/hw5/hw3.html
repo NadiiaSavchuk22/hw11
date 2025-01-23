@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4cd62441ed.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./st.css">
+    <link rel="stylesheet" href="./header.css">
+</head>
+
+<body>
+    <header>
+        <nav class="header_nav">
+            <div class="header_logo">
+                <a href="./hw1.html">
+                    <i class="fa-solid fa-cube"></i>
+                </a>
+            </div>
+            <div class="nav_links">
+                <a href="./hw1.html"> Overflow </a>
+                <a href="./hw2.html"> Display/Visibility </a>
+                <a href="./hw4.html"> Musicians </a>
+                <a href="./hw5.html"> Сubes </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="wrapper">
+            <div class="section_container">
+                <h1 class="page_heading" id="float">
+                    CSS Layout -
+                    <span class="heading_span">
+                        <img src="./assets/underline.svg" alt="Underline" class="heading_underline">
+                        float and clear
+                    </span>
+                </h1>
+                <div class="section_text">
+                    <p class="text_p">
+                        The CSS <span>float</span> property specifies how an element should float.
+                        <br>
+                        The CSS <span>clear</span> property specifies what elements can float beside the cleared element
+                        and on which side.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="section_container bg-gray">
+                <h2 class="section_title"> Floated Image </h2>
+                <div class="example_container">
+                    <img src="./assets/rocket.avif" alt="Image of rocket" class="float_img">
+                    <div id="container-float">
+                        <p>
+                            The float property was introduced to allow web developers to implement layouts involving an
+                            image floating inside a column of text, with the text wrapping around the left or right of it.
+                            The kind of thing you might get in a newspaper layout.
+    
+                            But web developers quickly realized that you can float anything, not just images, so the use of
+                            float broadened, for example, to fun layout effects such as drop-caps.
+    
+                            Floats have commonly been used to create entire website layouts featuring multiple columns of
+                            information floated so they sit alongside one another (the default behavior would be for the
+                            columns to sit below one another in the same order as they appear in the source). There are
+                            newer, better layout techniques available. Using floats in this way should be regarded as a
+                            legacy technique.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section_container bg-gray">
+                <h2 class="section_title"> Layout </h2>
+                <div class="layout_block">
+                    <div class="k_header k1">Header</div>
+                    <div class="k_sidebar k2 clearfix">Sidebar</div>
+                    <div class="k_main k3">Main content</div>
+                    <div class="k_footer k4">Footer</div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="section_container bg-gray">
+                <h2 class="section_title"> Float Next To Each Other </h2>
+                <div class="block_list float_elements">
+                    <div class="list_item">
+                        <div class="item_content clearfix">
+                            <div class="k k1 fl_left">1 float</div>
+                            <div class="k k2 fl_left">2 float</div>
+                            <div class="k k3 fl_left">3 float</div>
+                            <div class="k k4 fl_left">4 float</div>
+                        </div>
+                        <div class="additional_content">
+                            <div class="k k5">5</div>
+                            <div class="k k6 fl_left">6 float</div>
+                            <div class="k k1 fl_left">7 float</div>
+                            <div class="k k2 clearfix">8</div>
+                        </div>
+                        <div class="item_value">
+                            <div class="value">
+                                float: left
+                            </div>
+                            <img src="./assets/notch_right.svg" alt="Notch right" class="notch">
+                            <img src="./assets/notch_left.svg" alt="Notch left" class="notch notch-right">
+                        </div>
+                    </div>
+
+                    <div class="list_item">
+                        <div class="item_content clearfix">
+                            <div class="k k1 fl_right">1 float</div>
+                            <div class="k k2 fl_right">2 float</div>
+                            <div class="k k3 fl_right">3 float</div>
+                            <div class="k k4 fl_right">4 float</div>
+                        </div>
+                        <div class="additional_content">
+                            <div class="k k5 fl_right">5 float</div>
+                            <div class="k k6 fl_right">6 float</div>
+                            <div class="k k1 clearfix">7</div>
+                            <div class="k k2">8</div>
+                        </div>
+                        <div class="item_value">
+                            <div class="value">
+                                float: right
+                            </div>
+                            <img src="./assets/notch_right.svg" alt="Notch right" class="notch">
+                            <img src="./assets/notch_left.svg" alt="Notch left" class="notch notch-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <nav class="footer_nav">
+            <a href="./hw1.html"> Main page </a>
+        </nav>
+    </footer>
+</body>
+
+</html>

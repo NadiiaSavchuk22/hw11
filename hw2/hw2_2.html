@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #282A35;
+            padding: 15px;
+            font-size: 17px;
+            word-spacing: 25px;
+        }
+
+        .header_links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 25px;
+        }
+
+        h1 {
+            color: #04AA6D;
+            font-size: 42px
+        }
+
+        .section_title {
+            font-size: 32px;
+        }
+
+        abbr {
+            color: #9C27B0;
+            font-weight: 500;
+        }
+
+        cite {
+            color: #2196F3;
+        }
+
+        .tag {
+            color: red;
+        }
+
+        .tag span {
+            color: blue;
+        }
+
+        .tag i {
+            color: #000;
+        }
+
+        .note {
+            background-color: #ffffcc;
+            line-height: 1.8;
+        }
+
+        article {
+            background-color: #2D3748;
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        .article_title {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-align: center;
+        }
+
+        article p {
+            color: #E7E9EB;
+        }
+
+        aside {
+            background-color: #E7E9EB;
+            word-spacing: 15px;
+            padding: 15px;
+        }
+
+        .aside_title {
+            font-size: 26px;
+        }
+
+        .aside_links {
+            font-size: 17px;
+        }
+
+        .aside_links a {
+            color: #000;
+        }
+
+        footer {
+            background-color: #282A35;
+            font-size: 17px;
+            word-spacing: 15px;
+            padding: 15px;
+        }
+
+        .footer_links a {
+            color: #FFF4A3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="header_links">
+            <a href="https://www.w3schools.com/html/" target="_blank">HTML</a>
+            <a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS</a>
+            <a href="https://www.w3schools.com/js/default.asp" target="_blank">JAVASCRIPT</a>
+        </nav>
+    </header>
+    <main>
+        <h1>HTML Introduction</h1>
+        <section>
+            <h2>
+                Quotes
+            </h2>
+            <abbr title="Hyper Text Markup Language">HTML</abbr>
+            is the standard markup language for creating Web pages.
+
+            <div>
+                <p>
+                    <q>
+                        There was a time when people felt the internet was another world, but now people realise it's a
+                        tool that we use in this world.
+                    </q>
+                    <cite>
+                        Tim Berners-Lee
+                    </cite>
+                </p>
+                <p>
+                <blockquote>
+                    Websites have evolved significantly since the early days of the internet. Let’s explore some
+                    statistics that illustrate how they have developed over the years:
+                    symbolics.com, which was the world’s first domain name, was registered in 1985.
+                    mitre.org was registered in 1985, making it the world’s first-ever registered .org website.
+                    The first-ever web page on the internet went live on August 6, 1991. The page still exists, and
+                    you can check it out here.
+                    There were 17.1 million websites in 2000.
+                    In 2005, the number of websites on the internet increased to almost 65 million. This was also
+                    the year YouTube was created.
+                    In 2010, there were almost 207 million websites worldwide. Both Instagram and Pinterest were
+                    launched that year.
+                    38% of pages that existed in 2013 have been removed by 2024.
+                    The milestone of 1 billion websites was reached in 2014 for the first time.
+                    The total number of websites then fell below that mark before stabilizing above 1 billion again
+                    in March 2016.
+                </blockquote>
+                <cite>
+                    Matt Loy (seasoned IT professional with nearly two decades of experience in product development,
+                    strategy, and system architecture.)
+                </cite>
+                </p>
+            </div>
+            <hr>
+        </section>
+
+        <section>
+            <h2 class="section_title">
+                What is an HTML Element?
+            </h2>
+            <div>
+                <p>
+                    An HTML element is defined by a start tag, some content, and an end tag:
+                </p>
+                <p class="tag">
+                    <span>
+                        &#60;
+                    </span>
+                    tagname
+                    <span>
+                        &#62;
+                    </span>
+                    <i>
+                        Content goes here...
+                    </i>
+                    <span>
+                        &#60;
+                    </span>
+                    /tagname
+                    <span>
+                        &#62;
+                    </span>
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    The HTML
+                    <b>
+                        element
+                    </b>
+                    is everything from the start tag to the end tag:
+                </p>
+                <div class="tag">
+                    <span>
+                        &#60;
+                    </span>
+                    h1
+                    <span>
+                        &#62;
+                    </span>
+                    <i>
+                        My First Heading.
+                    </i>
+                    <span>
+                        &#60;
+                    </span>
+                    /h1
+                    <span>
+                        &#62;
+                    </span>
+                </div>
+                <div class="tag">
+                    <span>
+                        &#60;
+                    </span>
+                    p
+                    <span>
+                        &#62;
+                    </span>
+                    <i>
+                        My first paragraph.
+                    </i>
+                    <span>
+                        &#60;
+                    </span>
+                    /p
+                    <span>
+                        &#62;
+                    </span>
+                </div>
+            </div>
+
+            <p class="note">
+                Note: Some HTML elements have no content (like the &#60;br&#62; element). These elements are called
+                empty elements. Empty elements do not have an end tag!
+            </p>
+        </section>
+
+        <article>
+            <h2 class="article_title">
+                History of HTML
+            </h2>
+            <p>
+                In 1991, Tim Berners-Lee wanted to help people share information easily over the Internet. That is where
+                HTML came into play. HTML full form is HyperText Markup Language. Remember that it is not a programming
+                language but rather a markup language.
+                It got the name HTML as HyperText means that it allows the creation of hyperlinks and the word Markup
+                language was used as it allowed to use tags to mark up the structure of the elements on the website. It
+                uses
+                different tags to organize, and display text, images, links, and other elements on the web pages. Before
+                HTML there was SGML (Standard Generalized Markup Language). Even though it was a powerful system it was
+                very
+                complex so HTML is an improved version of SGML. Since the introduction of HTML, it has evolved with new
+                versions, adding more and more features and capabilities. HTML5 the latest version even supports
+                multimedia,
+                graphics, and more making it more powerful and flexible.
+            </p>
+        </article>
+    </main>
+
+    <aside>
+        <h3 class="aside_title">HTML Tutorial</h3>
+        <nav class="aside_links">
+            <a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML HOME</a>
+            <a href="https://www.w3schools.com/html/html_editors.asp" target="_blank">HTML Editors</a>
+            <a href="https://www.w3schools.com/html/html_css.asp" target="_blank">HTML CSS</a>
+            <a href="https://www.w3schools.com/html/html_scripts.asp" target="_blank">HTML JavaScript</a>
+        </nav>
+    </aside>
+
+    <footer>
+        <nav class="footer_links">
+            <a href="https://www.w3schools.com/plus/index.php" target="_blank">
+                PLUS
+            </a>
+            <a href="https://www.w3schools.com/spaces/index.php" target="_blank">
+                SPACES
+            </a>
+            <a href="https://campus.w3schools.com/collections/certifications" target="_blank">
+                GET CERTIFIED
+            </a>
+            <a href="https://www.w3schools.com/academy/teachers/index.php" target="_blank">
+                FOR TEACHERS
+            </a>
+            <a href="https://www.w3schools.com/academy/index.php" target="_blank">
+                FOR BUSINESS
+            </a>
+            <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">
+                CONTACT US
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Шляхи до файлів </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/st.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="./hw2.html"> HTML Multimedia </a>
+            <a href="./hw3.html"> Multimedia about animals </a>
+            <a href="./hw4.html"> Multimedia about nature </a>
+        </nav>
+    </header>
+    <main>
+        <h1 id="page_header"> Шляхи до файлів </h1>
+        <section>
+            <h2 class="section_title"> Відносний шлях </h2>
+            <p>
+                <span class="definition"> Відносний шлях </span> - шлях до файлу, який треба підключити відносно
+                поточного файлу, в якому ми зараз знаходимось (Дивимось на поточний файл і відносно нього рухаємось по
+                папкам).
+            </p>
+            <div class="image_container">
+                <img src="./assets/images/path.png" alt="Path to file">
+            </div>
+            <hr>
+            <div>
+                <h3 class="heading"> Синтаксис </h3>
+                <div>
+                    <b> ./ </b> назва файлу з роширенням
+                    <br>
+                    Це шлях до файлу, якщо він знаходиться в тій самій папці де наш поточний файл.
+                </div>
+            </div>
+
+            <div>
+                <h3 class="heading"> Чому цей шлях називається відносним? </h3>
+                <p>
+                    Називається відносним, бо ми вказуємо, що:
+                    <br>
+                    <b> . </b> будемо дивитись на свою поточну папку
+                    <br>
+                    <b> / </b> в поточній папці ми будемо брати якусь папку або файл
+                </p>
+            </div>
+            <div>
+                <h3 class="heading"> Рух по папкам </h3>
+                <p>
+                    <i class="symbol"> ./ </i> буде дивитись в поточній папці
+                    <br>
+                    <i class="symbol"> ../ </i> вийде на один рівень (на папку) вище
+                    <br>
+                    <i class="symbol"> ../../ </i> вийде на два рівні (на 2 папки) вище
+                </p>
+            </div>
+            <div>
+                <h3 class="heading"> Мінуси використання відносного шляху </h3>
+                <p>
+                    Якщо поміняти файл, з якого ми починаємо шукати або файл, який ми шукаємо, щоб підключити -
+                    <span class="warning">
+                        шлях перестане працювати і потрібно переписувати.
+                    </span>
+                    <br>
+                    <b> Є важливо де знаходиться поточний файл і файл, який ми шукаємо. </b>
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2 class="section_title"> Абсолютний шлях </h2>
+                <p>
+                    <span class="definition"> Абсолютний шлях </span> - шлях, який починається з кореня операційної
+                    системи
+                    (Windows - диск C або D) або проекту, і йде прописаний повністю до місця розташування поточного
+                    файлу.
+                    <i> Всі посилання в інтернеті є абсолютні. Шлях іде з кореня інтернету (потрібно прописати шлях до
+                        комп’ютера, який знаходиться по ту сторону). </i>
+                    <a href="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?q=80&w=2236&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        id="example_link">https://images.unsplash.com/photo-1529778873920-4da4926a72c2?q=80&w=2236&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D</a>
+                </p>
+            </div>
+            <div>
+                <h3 class="heading"> Перевага абсолютного шляху над відносним </h3>
+                <p>
+                    Якщо поміняти файл, з якого ми починаємо шукати (файл де ми зараз знаходимось) -
+                    <span class="warning"> шлях не перестане працювати. </span>
+                    <br>
+                    <b>Важливо тільки де є файл, який йде з кореня (який підключаємо). Де знаходиться файл з якого ми
+                        беремо (поточний файл) неважливо.</b>
+                </p>
+            </div>
+            <div>
+                <h3 class="heading"> Мінуси використання абсолютного шляху </h3>
+                <p>
+                    Якщо поміняти файл, який ми шукаємо, щоб підключити -
+                    <span class="warning">
+                        шлях перестане працювати і потрібно переписувати.
+                    </span>
+                    <br>
+                    Якщо комусь надіслати файл, де прописаний відносний шлях, або відкрити на іншому девайсі - шлях буде
+                    інший і не буде працювати. (В когось не буде такого кореня і файл може відкритись в іншій
+                    операційній системі і папці)
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_link">
+            <p>Learn more about HTML Multimedia </p>
+            <a href="https://www.w3schools.com/html/html_media.asp" target="_blank">HTML Multimedia - w3schools</a>
+        </div>
+        <div class="footer_link">
+            <p>Learn more about HTML Video</p>
+            <a href="https://www.w3schools.com/html/html5_video.asp#table1" target="_blank"> HTML Video - Media
+                Types</a>
+        </div>
+    </footer>
+</body>
+
+</html>

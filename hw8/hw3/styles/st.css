@@ -1,0 +1,373 @@
+* {
+    font-family: "Nunito Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+}
+
+main {
+    padding: 0px 25px;
+}
+
+#page_header {
+    background-color: #1d1d1b;
+    margin-bottom: 50px;
+    padding: 10px;
+    color: #f5f4eb;
+    font-size: 36px;
+    text-align: center;
+    transition: text-shadow 2s;
+    animation: textShadow 2s infinite;
+}
+
+section {
+    padding: 15px;
+    border: 1.5px solid #000;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    color: #1d1d1b;
+    line-height: 1.5;
+}
+
+section:nth-child(odd) h2,
+section:nth-child(even) h2 {
+    padding: 15px;
+    animation: gradient 3s linear;
+}
+
+section:nth-of-type(odd) h2 {
+    background: linear-gradient(rgba(156, 39, 176, 0.2), #fff);
+}
+
+section:nth-of-type(even) h2 {
+    background: linear-gradient(rgba(255, 138, 0, 0.2), #fff);
+}
+
+.section_title {
+    text-align: center;
+}
+
+.heading {
+    text-decoration: underline;
+}
+
+.definition {
+    color: #cf2e2e;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#example_link {
+    font-style: italic;
+    word-break: break-all;
+}
+
+img[alt] {
+    max-width: 100%;
+    height: auto;
+}
+
+img[alt*="Path"] {
+    max-width: 100%;
+    height: auto;
+    border: 2px dashed black;
+}
+
+.image_container {
+    max-width: 410px;
+}
+
+.container_images,
+.container_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.container_images img {
+    display: block;
+    height: 100%;
+    filter: grayscale(1);
+    transition: all 3s;
+    animation: appearImg 4s;
+}
+
+.container_images img:hover {
+    filter: grayscale(0);
+}
+
+.warning {
+    color: #E91E63;
+    font-weight: 600;
+}
+
+.symbol {
+    color: #9b51e0;
+    font-weight: 900;
+}
+
+.symbol:first-child {
+    color: yellowgreen;
+}
+
+.symbol:last-child {
+    color: red;
+}
+
+i~.symbol {
+    color: red;
+}
+
+.article_main {
+    line-height: 1.6;
+    word-spacing: 2px;
+    white-space: wrap;
+    word-break: break-all;
+    letter-spacing: 1px;
+}
+
+cite {
+    color: #E91E63;
+}
+
+.video,
+.audio,
+.iframe_container {
+    display: block;
+    margin: auto;
+    width: 800px;
+    max-width: 100%;
+}
+
+.video {
+    transition: all 3s;
+    animation: appearVideo 2.5s ease-in-out;
+}
+
+iframe {
+    margin: 15px;
+    width: 100%;
+    height: 550px;
+    border: none;
+}
+
+header {
+    background-color: #f5f4eb;
+    border-bottom: solid 1px #deddd3;
+    padding: 20px 10px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    max-width: 800px;
+    margin: auto;
+}
+
+a:not(a[target="_blank"]) {
+    text-decoration: none;
+    color: #0c090f;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: center;
+    padding: 15px;
+    transition: 0.5s;
+}
+
+a[target="_blank"]:visited {
+    color: lightskyblue;
+}
+
+.navigation a:hover,
+.navigation a:target {
+    background-color: #1d1d1b;
+    color: #fff;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #1d1d1b;
+    color: #fff;
+    padding: 32px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+}
+
+.footer_link p {
+    margin: 0;
+}
+
+.footer_link a {
+    color: #ffc990;
+}
+
+.footer_link a:hover {
+    color: #04c7fe;
+}
+
+.footer_link a:active {
+    color: red;
+}
+
+
+.flip_card {
+    background-color: transparent;
+    width: 410px;
+    height: 300px;
+    perspective: 1000px;
+    border: 1.5px solid #000;
+    cursor: pointer;
+}
+
+.flip_card:first-of-type+div h3 {
+    background-color: #ffc990;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transition-delay: 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip_card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    backface-visibility: hidden;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 2s;
+    filter: blur(3px);
+}
+
+.card-front img:hover {
+    animation: cardVisible 1s;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: #0c090f;
+}
+
+.card-back>h3 {
+    padding: 15px;
+    font-weight: 600;
+    background: #000;
+    color: #fff;
+}
+
+@keyframes appearImg {
+    0% {
+        transform: scale(0.5);
+    }
+
+    10% {
+        opacity: 0.2;
+    }
+
+    25% {
+        transform: scale(0.8) translateX(200px);
+        opacity: 0.4;
+    }
+
+    70% {
+        transform: scale(1) translateX(250px);
+        opacity: 0.7;
+        filter: grayscale(0);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes textShadow {
+    from {
+        text-shadow: yellow 0px 0 0px;
+        filter: hue-rotate(45deg);
+        transform: skewX(10deg);
+    }
+
+    to {
+        text-shadow: yellow 2px 3px 20px;
+    }
+}
+
+@keyframes cardVisible {
+    from {
+        filter: blur(3px);
+    }
+
+    to {
+        filter: blur(0px);
+    }
+}
+
+@keyframes appearVideo {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        transform: scale(1.1) translateX(-200px);
+        filter: hue-rotate(45deg);
+        opacity: 0.2;
+        box-shadow: 17px 8px 10px 0px rgba(66, 68, 90, 0.6);
+    }
+
+    70% {
+        transform: skew(-14deg, 0deg) translateX(150px);
+        opacity: 0.7;
+        box-shadow: 17px 8px 15px -4px rgba(66, 68, 90, 1);
+    }
+
+}
+
+@keyframes gradient {
+    25% {
+        background: linear-gradient(rgba(156, 39, 176, 0.6), #fff);
+    }
+
+    50% {
+        filter: hue-rotate(45deg);
+        transform: skewX(-14deg);
+    }
+
+    70% {
+        filter: hue-rotate(180deg);
+    }
+}

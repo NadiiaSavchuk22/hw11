@@ -1,0 +1,96 @@
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+.musicians_list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    position: relative;
+    z-index: 1;
+}
+
+li.musicians_list_item {
+    width: 400px;
+    padding: 50px 30px 30px;
+    margin: 10px;
+    color: #ffffff;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+    list-style-position: inside;
+    line-height: 1.7;
+    position: relative;
+}
+
+li.musicians_list_item::marker {
+    content: '\f001';
+    color: #ff2b2b;
+    font-family: 'Font Awesome 6 Free';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+li.musicians_list_item::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+li.musicians_list_item::after,
+li.musicians_list_item::before {
+    --angle: 0deg;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 4px;
+    transition: all 1s ease-out;
+    animation: 3s spin linear infinite;
+}
+
+li.musicians_list_item:nth-of-type(odd) {
+    background-color: #056646;
+}
+
+li.musicians_list_item:nth-of-type(even) {
+    background-color: #161616;
+}
+
+li.musicians_list_item:nth-child(even)::after,
+li.musicians_list_item:nth-child(even)::before {
+    background-image: conic-gradient(from var(--angle), #ce47a2, #ff4e73, #ff7d37, #f0b700, #a8eb12);
+}
+
+li.musicians_list_item:nth-child(odd)::after,
+li.musicians_list_item:nth-child(odd)::before {
+    background-image: conic-gradient(from var(--angle), rgba(255, 97, 97, 1), rgba(233, 178, 45, 1), rgba(192, 202, 75, 1), rgba(53, 179, 56, 1), rgba(86, 110, 243, 1), rgba(154, 39, 238, 1));
+}
+
+li.musicians_list_item>span {
+    font-weight: 500;
+    color: #c6fb50;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg
+    }
+}

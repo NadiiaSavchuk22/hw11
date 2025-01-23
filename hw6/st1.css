@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 600px;
+    background-color: #ffa500;
+}
+
+.container.float {
+    padding: 100px 0;
+}
+
+.container.flex {
+    display: flex;
+    align-items: center;
+}
+
+.k {
+    width: 25%;
+    height: 400px;
+}
+
+.container.float .k {
+    float: left;
+}
+
+.container.float :not(.k) {
+    clear: both;
+}
+
+.k1 {
+    background-color: #d03231;
+
+}
+
+.k2 {
+    background-color: #089649;
+}
+
+.k3 {
+    background-color: #11a0ce;
+}
+
+.k4 {
+    background-color: #000000;
+}
