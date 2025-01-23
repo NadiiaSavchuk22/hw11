@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/custom-input.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="./signUp.html">Sign Up</a>
+            <a href="./signIn.html">Sign In</a>
+            <a href="./adaptive-design.html">Adaptive design</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <h1 class="heading">Filter</h1>
+                <form name="filter" id="filter">
+                    <div class="input-container">
+                        <div>Product type:</div>
+                        <select name="productType" id="productType">
+                            <option value="phone">Phone</option>
+                            <option value="laptop">Laptop</option>
+                            <option value="hoover">Hoover</option>
+                            <option value="charger">Charger</option>
+                        </select>
+                    </div>
+
+                    <div class="input-container">
+                        <div>Capacity:</div>
+                        <label for="c15w" class="checkbox-label"> 15w
+                            <input type="checkbox" name="capacity" id="c15w">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="c25w" class="checkbox-label"> 25w
+                            <input type="checkbox" name="capacity" id="c25w">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="c65w" class="checkbox-label"> 65w
+                            <input type="checkbox" name="capacity" id="c65w">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="c100w" class="checkbox-label"> 100w
+                            <input type="checkbox" name="capacity" id="c100w">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="c200w" class="checkbox-label"> 200w
+                            <input type="checkbox" name="capacity" id="c200w">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <div class="input-container">
+                        <div>Brand:</div>
+                        <label for="samsung" class="checkbox-label"> Samsung
+                            <input type="checkbox" name="brand" id="samsung">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="lg" class="checkbox-label"> LG
+                            <input type="checkbox" name="brand" id="lg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="asus" class="checkbox-label"> ASUS
+                            <input type="checkbox" name="brand" id="asus">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="lenovo" class="checkbox-label"> Lenovo
+                            <input type="checkbox" name="brand" id="lenovo">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <div class="input-container">
+                        <div>Sort:</div>
+                        <select name="price" id="price">
+                            <option value="fromСheap" selected>Price: low to high</option>
+                            <option value="fromExpensive">Price: high to low</option>
+                            <option value="byRating">By rating</option>
+                        </select>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="modelName">Model name:</label>
+                        <input type="text" id="modelName" name="modelName" placeholder="Enter model name...">
+                    </div>
+                    <input type="submit" value="Send" id="sendForm">
+                </form>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2 class="heading">Login Form</h2>
+                <iframe src="./signIn.html"></iframe>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

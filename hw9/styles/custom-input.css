@@ -1,0 +1,107 @@
+.radio-label {
+    display: block;
+    position: relative;
+    padding: 0 0 10px 35px;
+    line-height: 16px;
+}
+
+input[type="radio"],
+.radio-label .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin: 0 0 15px 0;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    border: 1px solid var(--grey-1);
+}
+
+.radio-label .checkmark {
+    background-color: var(--beige);
+    border-radius: 50%;
+}
+
+.radio-label:hover input~.checkmark {
+    background-color: var(--grey-3);
+}
+
+.radio-label input:checked~.checkmark {
+    background-color: var(--gold);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-label input:checked~.checkmark:after {
+    display: block;
+}
+
+.radio-label .checkmark:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--white);
+}
+
+
+
+.checkbox-label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    line-height: 16px;
+    font-size: 16px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-label .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: var(--grey-3);
+}
+
+
+.checkbox-label:hover input~.checkmark {
+    background-color: var(--grey-2);
+}
+
+.checkbox-label input:checked~.checkmark {
+    background-color: var(--gold);
+}
+
+.checkbox-label input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox-label .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 3px;
+    height: 8px;
+    border: 1px solid var(--white);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
